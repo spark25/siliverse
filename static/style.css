@@ -1,0 +1,187 @@
+/* primary = #006859
+secondary= #008A74
+turq #1abc9c
+tertiary = #BDD9D4 */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.main-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.brand img{
+    position: absolute;
+    width: 20vmin;
+ }
+
+.overview{
+    width: 60vw;
+    padding: 5%;
+
+}
+
+.overview nav ul{
+    display: flex;
+    list-style: none;
+    height: 2em;
+    float: right;
+    align-items: center;
+}
+.overview nav ul li{   
+    margin-left: 2ch;
+}
+
+.overview nav ul li::before{   
+    content: '';
+    display: block;
+    border-top: 2px solid #fff;
+    transition: border-top 1s;
+
+}
+.overview nav ul li:hover::before{   
+    
+    border-top: 2px solid #008A74
+
+}
+.introContent{
+    margin-top: 25vh;;
+}
+
+#welcomeMsg{
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+#oneLiner{
+    color: #008A74;
+    font-size: 1.5rem;
+}
+
+.briefSection::after{
+    content: '';
+    width:5ch;
+    height:1ch;
+    display: block;
+    background: #008A74;
+    margin-top: 2vmin;
+
+}
+
+#introSummary{
+    margin-top: 5vmin;
+    font-size: 1em;
+    line-height: 1.5em;
+    max-width: 30vmax;
+}
+
+#exploreButton{
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 10vmin;
+    width: 20vmax;
+    height: 4vmax;
+    background-image: linear-gradient(to left, #008A74, #1abc9c);
+}
+
+#exploreButton i{
+  margin-left: 2em;
+}
+
+#exploreButton:hover{
+    box-shadow: 5px 10px 20px rgb(214, 214, 214);
+}
+
+#showcase{
+    background: url('../res/3d.jpg');
+    background-size: cover;
+    width: 40vw;
+}
+
+#explorePane{
+    width: 0;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: width .5s;
+    background: #fff;
+    /* background-image: linear-gradient(to top, #BDD9D4 0% ,  #fff 100%); */
+
+}
+
+#closeExplorePane{
+    position: absolute;
+    visibility: hidden;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+#closeExplorePane:hover{
+    color: rgb(151, 150, 150);
+}
+
+#workSections{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20vh;
+    visibility: hidden;
+    padding: 10%;
+}
+
+.sections{
+    padding: 5%;
+    border-top: 2px solid #fff;
+    transition: border-top .5s;
+}
+
+.sections:hover{
+    border-top: 2px solid #008A74;
+
+}
+
+.sectionHead{
+    text-align: center;
+    padding-top: 1em;
+    color: #008A74;
+}
+
+#sectionOverviewPane{
+    width: 0vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0vw;
+    z-index: 1;
+    transition: width  .5s;
+    background: #008A74;
+    /* background-image: linear-gradient(to left, #008A74, #1abc9c); */
+    color: #dddddd;
+
+}
+
+#sectionOverview{
+    display: none;
+    padding: 10%;
+}
+
+
+#iotAutoOverview{
+    display: none;
+    overflow: hidden;
+}
+
+#_3dPrintOverview{
+    display: none;
+    overflow: hidden;
+}
